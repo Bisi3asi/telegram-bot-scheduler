@@ -3,7 +3,6 @@ name: Set Telegram bot Daily routine
 on:
   schedule:
     # 매주 월~금 오전 8:15 KST = 매일 23:15 UTC (주말 제외)
-    # 요청 전송에 15분쯤 걸림
     - cron: '15 23 * * 1-5'
   workflow_dispatch:
 
@@ -24,7 +23,8 @@ jobs:
           python-version: '3.10'
 
       - name: Install dependencies
-        run: pip install requests
+        run: |
+          pip install requests pytz
 
       - name: Run bot script
         run: python sendMessage.py
