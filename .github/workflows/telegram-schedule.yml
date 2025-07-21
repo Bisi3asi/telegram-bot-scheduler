@@ -3,7 +3,7 @@ name: Set Telegram bot Daily routine
 on:
   schedule:
     # 매주 월~금 오전 8:15 KST = 매일 23:15 UTC (주말 제외)
-    - cron: '15 23 * * 1-5'
+    - cron: '15 23 * * 0-4'
   workflow_dispatch:
 
 jobs:
