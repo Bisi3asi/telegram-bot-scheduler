@@ -27,4 +27,4 @@ jobs:
           pip install requests pytz
 
       - name: Run bot script
-        run: python sendMessage.py
+        run: python dailyMessage.py
