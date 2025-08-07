@@ -61,7 +61,7 @@ def main():
     print("===============telegram bot initialized==================")
     app = ApplicationBuilder().token(BOT_TOKEN).build()
     app.add_handler(CommandHandler("lunch", send_lunch))
-    app.add_handler(CommandHandler("ipo"), send_ipo)
+    app.add_handler(CommandHandler("ipo", send_ipo))
     app.run_polling()
 
 if __name__ == "__main__":
