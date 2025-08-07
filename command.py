@@ -51,11 +51,17 @@ async def send_lunch(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     await update.message.reply_text(reply)
 
-# 실행 함수
+async def send_ipo(update: Update, context: ContextTypes.DEFAULT_TYPE):
+
+    reply = "구현중인 기능입니다!"
+
+    await update.message.reply_text(reply)
+
 def main():
     print("===============telegram bot initialized==================")
     app = ApplicationBuilder().token(BOT_TOKEN).build()
     app.add_handler(CommandHandler("lunch", send_lunch))
+    app.add_handler(CommandHandler("ipo"), send_ipo)
     app.run_polling()
 
 if __name__ == "__main__":
